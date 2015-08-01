@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  resources :books
   root to: 'sessions#new'
+  resources :books
   resource :sessions
   resource :users
   # The priority is based upon order of creation: first created -> highest priority.

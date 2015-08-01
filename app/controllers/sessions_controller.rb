@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
 
     if @user
       session[:user_id] = @user.id
-      redirect_to notes_path
+      redirect_to books_path
     else
       render action: 'new'
     end

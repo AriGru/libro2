@@ -5,12 +5,13 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
-    @books = current_user.books.all
+    @books = Book.all
   end
 
   # GET /books/1
   # GET /books/1.json
   def show
+  @book = Book.find(params[:id])
   end
 
   # GET /books/new
