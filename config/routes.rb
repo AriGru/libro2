@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :books
   root to: 'sessions#new'
   resource :sessions
   resource :users
