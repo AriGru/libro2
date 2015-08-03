@@ -5,7 +5,9 @@
 <table>
   <thead>
     <tr>
-<%= @client.book_by_title('The Lord of the Rings') %>
+<!-- <%= GoodreadsAPI.book_by_title('The Lord of the Rings') %> -->
+<!-- <%= GoodreadsAPI.book_by_title('The Lord of the Rings').image_url %> -->
+<%= image_tag( GoodreadsAPI.book_by_title('The Lord of the Rings').image_url) %>
       <!-- <th>User</th> -->
       <th>Title</th>
       <th>Author</th>
