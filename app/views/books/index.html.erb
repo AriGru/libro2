@@ -2,12 +2,10 @@
 
 <h1>Discovery Page</h1>
 
-
-
 <table>
   <thead>
     <tr>
-
+<%= @client.book_by_title('The Lord of the Rings') %>
       <!-- <th>User</th> -->
       <th>Title</th>
       <th>Author</th>
@@ -20,7 +18,7 @@
     <% @books.each do |book| %>
       <tr>
 
-      
+
         <td><%= book.title %></td>
         <td><%= book.author %></td>
         <td><%= book.description %></td>
