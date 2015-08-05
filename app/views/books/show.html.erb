@@ -2,19 +2,23 @@
 
 
 
+    <!-- <%= image_tag( GoodreadsAPI.book_by_title(@book.title).image_url)%>
+    <%= GoodreadsAPI.book_by_title(@book.title).authors.author.name %>
+    <%= GoodreadsAPI.book_by_title(@book.title).description %> -->
+
 <p>
   <strong>Title:</strong>
-  <%= @book.title %>
+  <%= image_tag( GoodreadsAPI.book_by_title(@book.title).image_url) %>
 </p>
 
 <p>
   <strong>Author:</strong>
-  <%= @book.author %>
+  <%= GoodreadsAPI.book_by_title(@book.title).authors.author.name %>
 </p>
 
 <p>
   <strong>Description:</strong>
-  <%= @book.description %>
+  <%= GoodreadsAPI.book_by_title(@book.title).description %>
 </p>
 
 <%= link_to 'Edit', edit_book_path(@book) %> |

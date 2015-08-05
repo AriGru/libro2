@@ -7,6 +7,4 @@ class GoodreadsAPI
     client.book_by_title(title)
   end
 
-
-
 end
