@@ -9,7 +9,6 @@ class BooksController < ApplicationController
   # GET /books.json
   def index
     @books = Book.all
-    @client = Goodreads::Client.new(:api_key => 'gNh5zqd2UoEjSGbDxhQc3g', :api_secret => 'jbypCJfZEExfPk9P1pOjhfxcV0Tez6j6MwFbGrbso')
   end
 
   # GET /books/1

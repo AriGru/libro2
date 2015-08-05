@@ -6,11 +6,6 @@
   <thead>
     <tr>
 
-<!-- <%= GoodreadsAPI.book_by_title('The Lord of the Rings') %> -->
-<!-- <%= GoodreadsAPI.book_by_title('The Lord of the Rings').image_url %> -->
-
-
-
       <!-- <th>User</th> -->
 
       <th>Title</th>
@@ -27,15 +22,8 @@
         <% if book.url %>
           <%= link_to image_tag(book.url), book %>
         <% end %>
-        <%#= GoodreadsAPI.book_by_title(book.).authors.author.name %>
-        <%#= GoodreadsAPI.book_by_title(book.title).description %>
 
-        <td><%# book.title %></td>
-        <td><%# book.author %></td>
-        <td><%# book.description %></td>
-        <td><%# link_to 'Show', book %></td>
-        <td><%# link_to 'Edit', edit_book_path(book) %></td>
-        <td><%# link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><% link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
