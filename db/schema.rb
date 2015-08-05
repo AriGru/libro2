@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(version: 20150805002612) do
   enable_extension "plpgsql"
 
   create_table "books", force: :cascade do |t|
-    t.integer  "user_id"
     t.string   "title"
     t.string   "author"
     t.text     "description"
@@ -26,7 +25,14 @@ ActiveRecord::Schema.define(version: 20150805002612) do
     t.string   "url"
   end
 
-  add_index "books", ["user_id"], name: "index_books_on_user_id", using: :btree
+  create_table "chats", force: :cascade do |t|
+    t.text     "comment"
+    t.integer  "book_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "chats", ["book_id"], name: "index_chats_on_book_id", using: :btree
 
   create_table "user_books", force: :cascade do |t|
     t.integer  "user_id"
@@ -47,7 +53,7 @@ ActiveRecord::Schema.define(version: 20150805002612) do
 
   add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
-  add_foreign_key "books", "users"
+  add_foreign_key "chats", "books"
   add_foreign_key "user_books", "books"
   add_foreign_key "user_books", "users"
 end
