@@ -1,8 +1,16 @@
 Rails.application.routes.draw do
 
-  resources :chats
   root to: 'sessions#new'
-  resources :books
+
+
+  resources :chats, only: [:show, :edit, :update, :destroy]
+
+  resources :books do
+    resources :chats, only: [:index, :new, :create]
+  end
+
+
+
   resource :sessions
   resource :users
 

@@ -1,5 +1,6 @@
 class ChatsController < ApplicationController
   before_action :set_chat, only: [:show, :edit, :update, :destroy]
+  before_action :set_book, only: [:index, :create, :new]
 
   # GET /chats
   # GET /chats.json
@@ -24,11 +25,11 @@ class ChatsController < ApplicationController
   # POST /chats
   # POST /chats.json
   def create
-    @chat = Chat.new(chat_params)
+    @chat = @book.chats.new(chat_params)
 
     respond_to do |format|
       if @chat.save
-        format.html { redirect_to @chat, notice: 'Chat was successfully created.' }
+        format.html { redirect_to book_path(@chat.book), notice: 'Chat was successfully created.' }
         format.json { render :show, status: :created, location: @chat }
       else
         format.html { render :new }
@@ -65,6 +66,10 @@ class ChatsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_chat
       @chat = Chat.find(params[:id])
+    end
+
+    def set_book
+      @book = Book.find(params[:book_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
