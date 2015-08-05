@@ -1,4 +1,4 @@
-<%= form_for(@chat) do |f| %>
+<%= form_for([@book, @chat]) do |f| %>
   <% if @chat.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@chat.errors.count, "error") %> prohibited this chat from being saved:</h2>
@@ -15,11 +15,8 @@
     <%= f.label :comment %><br>
     <%= f.text_area :comment %>
   </div>
-  <div class="field">
-    <%= f.label :book_id %><br>
-    <%= f.text_field :book_id %>
-  </div>
   <div class="actions">
     <%= f.submit %>
+
   </div>
 <% end %>
