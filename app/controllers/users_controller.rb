@@ -11,17 +11,16 @@ class UsersController < ApplicationController
     else
       render action: 'new'
     end
-
-    def show
-      @user = User.find(params[:id])
-    end
   end
 
+  def show
+    @user = User.find(params[:id])
+  end
   private
 
   def user_params
     params.
     require(:user).
-    permit(:username, :password, :password_confirmation)
+    permit(:username, :password, :password_confirmation, :name, :bio)
   end
 end
