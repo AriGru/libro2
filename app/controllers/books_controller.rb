@@ -2,9 +2,7 @@ class BooksController < ApplicationController
   # before_action :set_book, only: [:show, :edit, :update, :destroy]
   before_action :require_logged_in
 
-  # client = Goodreads::Client.new(:api_key => 'gNh5zqd2UoEjSGbDxhQc3g', :api_secret => 'jbypCJfZEExfPk9P1pOjhfxcV0Tez6j6MwFbGrbso')
-
-
+  
   # GET /books
   # GET /books.json
   def index
