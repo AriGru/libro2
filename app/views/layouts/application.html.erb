@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Libro2</title>
+  <title>Libro</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto+Slab:300' rel='stylesheet' type='text/css'>
 </head>
+
+
+
 <body>
+  <header>
+    <h1>L I B R O</h1>
+    <div class="nav">
+        Explore | Profile
+    </div>
+  </header>
+
 
 <%= yield %>
 

@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+
+header {
+  text-align: center;
+  font-family: 'Open Sans Condensed';
+  font-size: 4em;
+}
+
+.nav {
+  font-size: 0.7em;
+}
+header li {
+  font-size: 1em;
+     position: absolute;
+     top: 0px;
+     right: 20px;
+     display: inline-block;
+     list-style: none;
+
+}
