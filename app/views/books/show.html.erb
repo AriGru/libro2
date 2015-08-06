@@ -21,7 +21,8 @@
 <p>
   <%= chat.comment %>
   <br>
-  Added on: <%= localize(chat.created_at, :format => :long) %>
+  Added on: <%= localize(chat.created_at, :format => :long) %> |
+  Added by: <%= chat.user.username %>
 </p>
 <% end %>
 
