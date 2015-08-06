@@ -6,10 +6,11 @@
 
   <tbody>
     <% @books.each do |book| %>
-    <div class="book_img">
+
       <tr>
-        <% if book.url %>
-     <%= link_to image_tag(book.url), book %> </div>
+      <div class="grid">
+      <% if book.url %>
+       <%= link_to image_tag(book.url), book %>
         <% end %>
       </div>
       </tr>
