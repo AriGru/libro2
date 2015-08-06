@@ -29,7 +29,7 @@ class ChatsController < ApplicationController
 
     respond_to do |format|
       if @chat.save
-        format.html { redirect_to book_path(@chat.book), notice: 'Chat was successfully created.' }
+        format.html { redirect_to book_path(@chat.book) }
         format.json { render :show, status: :created, location: @chat }
       else
         format.html { render :new }
