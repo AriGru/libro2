@@ -25,8 +25,8 @@ class ChatsController < ApplicationController
   # POST /chats
   # POST /chats.json
   def create
-    @chat = @book.chats.new(chat_params)
-    @chat.user = current_user
+    @chat = current_user.chats.new(chat_params)
+    @chat.book = @book 
 
     respond_to do |format|
       if @chat.save
