@@ -21,12 +21,11 @@
 <p>
   <%= chat.comment %>
   <br>
-  Added on: <%= chat.created_at %>
+  Added on: <%= localize(chat.created_at, :format => :long) %>
 </p>
 <% end %>
 
 <h3>New Chat</h3>
 <%= render 'chats/form' %>
-
-<%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>
+
