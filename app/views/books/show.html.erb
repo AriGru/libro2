@@ -22,7 +22,7 @@
   <%= chat.comment %>
   <br>
   Added on: <%= localize(chat.created_at, :format => :long) %> |
-  Added by: <%= chat.user.username %>
+  Added by: <%= link_to chat.user.username, user_path(chat.user)  %>
 </p>
 <% end %>
 
