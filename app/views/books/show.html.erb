@@ -15,18 +15,21 @@
   <%= @book.description.html_safe %>
 </p>
 
-<h3>Chat</h3>
+<br>
+<br>
 
 <% @book.chats.each do |chat| %>
 <p>
   <%= chat.comment %>
   <br>
+
   Added on: <%= localize(chat.created_at, :format => :long) %> |
   Added by: <%= link_to chat.user.username, user_path(chat.user)  %>
+
 </p>
 <% end %>
 
-<h3>New Chat</h3>
+<h3>Join the Conversation...</h3>
+
 <%= render 'chats/form' %>
 <%= link_to 'Back', books_path %>
-
