@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
+
   root to: 'sessions#new'
+
+  resources :activities
 
 
   resources :chats, only: [:show, :edit, :update, :destroy]

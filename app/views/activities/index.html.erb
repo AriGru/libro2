@@ -1,0 +1,10 @@
+<h1> Friends Activities </h1>
+
+<% @activities.each do |activity| %>
+<div class="activity">
+  <%= link_to activity.owner.username, activity.owner if activity.owner %>
+  added comment to <%= link_to activity.trackable.book,
+  activity.trackable.book %>
+</div>
+
+<% end %>
