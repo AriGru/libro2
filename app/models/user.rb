@@ -1,7 +1,10 @@
 class User < ActiveRecord::Base
 
+  acts_as_follower
+
   include PublicActivity::Model
   tracked owner: ->(controller, model) { controller && controller.current_user }
+
 
   has_secure_password
 
