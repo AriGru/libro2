@@ -13,6 +13,10 @@
  *= require_tree .
  *= require_self
  */
+ body {
+   background-image: url(stardust.png);
+ }
+
 nav {
   text-align: right;
 
@@ -22,6 +26,7 @@ header {
   text-align: center;
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 4em;
+  color: white;
 }
 
 .nav {
