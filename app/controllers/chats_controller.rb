@@ -26,12 +26,12 @@ class ChatsController < ApplicationController
   # POST /chats.json
   def create
     @chat = current_user.chats.new(chat_params)
-    @chat.book = @book 
+    @chat.book = @book
 
 
     respond_to do |format|
       if @chat.save
-        format.html { redirect_to book_path(@chat.book), notice: 'Chat was successfully created.' }
+        format.html { redirect_to book_path(@chat.book) }
         format.json { render :show, status: :created, location: @chat }
       else
         format.html { render :new }
