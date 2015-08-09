@@ -5,6 +5,10 @@ class BooksController < ApplicationController
 
   # GET /books
   # GET /books.json
+  def follow
+    book = Book.find(params[:id])
+  end
+
   def index
     @books = Book.all
   end

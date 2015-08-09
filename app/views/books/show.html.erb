@@ -1,8 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+  <%= image_tag(@book.url) %>
+  <input type="submit" name="" value="Follow" id="open-contacts-dialog-btn" class="inbox-sf-add-btn tip" title="Open an dialog to add a new contact"/>
+
 <p>
   <strong>Title:</strong>
-  <%= image_tag(@book.url) %>
+  <%= @book.title %>
 </p>
 
 <p>
@@ -17,6 +20,8 @@
 
 <br>
 <br>
+
+
 
 <% @book.chats.each do |chat| %>
 <p>

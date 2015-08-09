@@ -1,5 +1,6 @@
 class Book < ActiveRecord::Base
   acts_as_followable
+  
   include PublicActivity::Model
   tracked owner: ->(controller, model) { controller && controller.current_user }
 

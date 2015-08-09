@@ -13,6 +13,10 @@
  *= require_tree .
  *= require_self
  */
+nav {
+  text-align: right;
+
+}
 
 header {
   text-align: center;
