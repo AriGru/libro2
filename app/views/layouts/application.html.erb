@@ -11,13 +11,16 @@
 
 
 <body>
+  <nav>
+    <%= link_to 'Sign Up', new_user_path, {:style=>'color:#FFFFFF;', :class => "css_class"} %> | <%= link_to 'Login', root_path, {:style=>'color:#FFFFFF;', :class => "css_class"} %> | <%= link_to 'Profile', user_path(current_user), {:style=>'color:#FFFFFF;', :class => "css_class"} %>
+  </nav>
   <header>
     <h1>L I B R O</h1>
     <div class="nav">
 
-       <%= link_to 'Explore', books_path %> | <%= link_to 'Activity', activities_path %> | <%= link_to 'Profile', user_path(current_user) %> 
+      <h3> <%= link_to 'Explore', books_path, {:style=>'color: #BCE7FD;',  :class => "css_class"} %> | <%= link_to 'Activity', activities_path, {:style=>'color:#BCE7FD;', :class => "css_class"} %> | <%= link_to 'Profile', user_path(current_user), {:style=>'color:#BCE7FD;', :class => "css_class"} %>
 
-
+</h3>
 
         <!-- <%#= link_to 'Explore', books_path %>| <%#= link_to 'Profile', book_path %> -->
     </div>

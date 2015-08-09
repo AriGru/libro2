@@ -14,14 +14,21 @@
  *= require_self
  */
 
+ body {
+   background-image: url(stardust.png);
+ }
+
 header {
   text-align: center;
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 4em;
+  color: #E84545;
+  link-decoration: none;
 }
 
 .nav {
-  font-size: 0.7em;
+  font-size: 0.4em;
+  
 }
 header li {
   font-size: 1em;

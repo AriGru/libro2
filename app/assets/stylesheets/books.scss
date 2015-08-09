@@ -2,10 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-h2 {
+.head {
   font-family: 'Roboto slab', serif;
   font-size: 2em;
   padding-top: .5em;
+  color: #BCE7FD;
+  font-size: 1.2em;
 }
 
 .grid {
