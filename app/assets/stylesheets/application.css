@@ -13,10 +13,16 @@
  *= require_tree .
  *= require_self
  */
+ @import "font-awesome-sprockets";
+@import "font-awesome";
 
  body {
    background-image: url(stardust.png);
    color: #ffffff;
+ }
+
+ nav {
+   text-align: right;
  }
 
 header {
@@ -29,6 +35,7 @@ header {
 
 .nav {
   font-size: 0.4em;
+
 
 }
 header li {
