@@ -20,17 +20,23 @@
    background-image: url(stardust.png);
    color: #ffffff;
  }
-
+.icon{
+  text-align: left;
+}
  nav {
    text-align: right;
  }
 
+header h1{
+  font-size: 4em;
+}
 header {
   text-align: center;
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 4em;
   color: #E84545;
   link-decoration: none;
+  padding-bottom: 1em;
 }
 
 .nav {

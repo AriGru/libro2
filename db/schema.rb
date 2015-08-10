@@ -53,6 +53,19 @@ ActiveRecord::Schema.define(version: 20150809225617) do
   add_index "chats", ["book_id"], name: "index_chats_on_book_id", using: :btree
   add_index "chats", ["user_id"], name: "index_chats_on_user_id", using: :btree
 
+  create_table "follows", force: :cascade do |t|
+    t.integer  "followable_id",                   null: false
+    t.string   "followable_type",                 null: false
+    t.integer  "follower_id",                     null: false
+    t.string   "follower_type",                   null: false
+    t.boolean  "blocked",         default: false, null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "follows", ["followable_id", "followable_type"], name: "fk_followables", using: :btree
+  add_index "follows", ["follower_id", "follower_type"], name: "fk_follows", using: :btree
+
   create_table "user_books", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "book_id"
@@ -66,7 +79,6 @@ ActiveRecord::Schema.define(version: 20150809225617) do
   create_table "users", force: :cascade do |t|
     t.string   "username"
     t.string   "password_digest"
-    t.string   "user_id"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
     t.string   "name"
