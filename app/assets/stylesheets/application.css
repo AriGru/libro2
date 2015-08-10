@@ -40,3 +40,8 @@ header li {
      list-style: none;
 
 }
+
+
+.profile_pic{
+  border-radius: 100%;
+}
