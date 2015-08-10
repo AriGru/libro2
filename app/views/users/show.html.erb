@@ -1,6 +1,10 @@
 <h1>My Profile</h1>
 
 
+<%= image_tag @user.image.url(:thumb), class: "profile_pic" %>
+
+<br>
+
 <%= @user.name %>
 
 <br>

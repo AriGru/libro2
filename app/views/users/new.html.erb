@@ -1,6 +1,13 @@
 <h1>Sign up</h1>
 
-<%= form_for @user do |f| %>
+<%= form_for @user, html: { multipart: true } do |f| %>
+
+
+
+<p>
+  <%= f.label :image %>
+  <%= f.file_field :image %>
+</p>
 
 <p>
   <%= f.label :name %>

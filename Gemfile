@@ -33,6 +33,9 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'goodreads'
 
 gem 'public_activity'
+
+gem "paperclip", "~> 4.3"
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
