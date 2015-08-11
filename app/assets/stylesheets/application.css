@@ -30,25 +30,23 @@ body {
 
 .container {
   display: block;
-  width: 25em;
-  margin: 100px auto;
+  position: absolute;
+  left: 37%;
 }
 
 .search-container {
   overflow: hidden;
-  float: right;
   height: 4em;
-  width: 4em;
+  width: 25em;
   border-radius: 2em;
   box-shadow: 0 0 5px #6A5D4F;
   -moz-transition: all 0.35s;
   -webkit-transition: all 0.35s;
 }
 .search-container:hover {
-  width: 25em;
   border-radius: 5px 2em 2em 5px;
 }
-.search-container:hover input {
+.search-container input {
   display: inline-block;
   width: 19em;
   padding: 10px;
@@ -123,18 +121,19 @@ input:focus {
    cursor: pointer;
  }
 
-header h1{
+/*header h1{
   padding-top: 1.3em;
   font-size: 2.5em;
-}
+}*/
+
 header {
-  text-align: center;
+  /*text-align: center;
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 4em;
   color: #E84545;
   link-decoration: none;
-  padding-bottom: 1em;
-
+  padding-bottom: 1em;*/
+  position: relative;
 }
 
 .nav {
@@ -148,7 +147,7 @@ header {
 
 
 
-a
+/*a
 header li {
   font-size: 1em;
      position: absolute;
@@ -159,4 +158,14 @@ header li {
 
 .profile_pic{
   border-radius: 100%;
+}
+
+/****************** Nav bar elements ******************/
+
+
+.libro-logo{
+  font-size:10em;
+  text-align: center;
+  padding: 0px;
+  margin-top: 200px;
 }
