@@ -21,6 +21,7 @@
       <%= link_to 'Sign Up', new_user_path, {:style=>'color:#FFFFFF;', :class => "css_class"} %> |
       <%= link_to 'Login', root_path, {:style=>'color:#FFFFFF;', :class => "css_class"} %> |
       <%= link_to_unless(@current_user.nil?, "Profile", user_path(current_user), {:style=>'color:#FFFFFF;', :class => "css_class"}) %>
+      <%= link_to 'Logout', sessions_path, {:style=>'color:#FFFFFF;', :class => "css_class", method: 'delete'} %> |
   </div>
 
 

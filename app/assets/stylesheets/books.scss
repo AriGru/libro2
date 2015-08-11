@@ -3,14 +3,18 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .head {
+
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 2em;
+
   padding-top: .5em;
   color: #BCE7FD;
-  font-size: 1.2em;
   margin-left: 1.1em;
 }
 
+h1{
+  font-size: 1.4em;
+}
 .grid {
   display: inline;
   padding-right: 5px;

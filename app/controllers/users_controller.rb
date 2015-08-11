@@ -8,6 +8,7 @@ class UsersController < ApplicationController
     @user = User.new user_params
 
     if @user.save
+      session[:user_id] = @user.id
       redirect_to root_path, notice: "Created user"
     else
       render action: 'new'
@@ -21,6 +22,9 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    else
+      render action: 'new'
+    end
   end
 
   private
@@ -30,4 +34,3 @@ class UsersController < ApplicationController
     require(:user).
     permit(:username, :password, :password_confirmation, :name, :bio, :image)
   end
-end

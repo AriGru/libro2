@@ -1,6 +1,17 @@
 class SessionsController < ApplicationController
   def new
+    @user = User.new
   end
+
+def destroy
+  session[:user_id] = nil
+  @current_user = nil
+  redirect_to new_user_path
+  return
+end
+
+def index
+end
 
   def create
     @user = User.
