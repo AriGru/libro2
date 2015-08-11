@@ -14,23 +14,44 @@
  *= require_self
  */
 
+@import "font-awesome";
+@import "font-awesome-sprockets";
+
  body {
    background-image: url(stardust.png);
    color: #ffffff;
  }
+.profile_pic {
+  border-radius: 100%;
+}
+.hamburger-menu {
+  text-align: right;
+}
+ .hamburger-menu a {
+   text-decoration: none !important;
+ }
 
+header h1{
+  font-size: 2em;
+}
 header {
   text-align: center;
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 4em;
   color: #E84545;
   link-decoration: none;
+  padding-bottom: 1em;
 }
 
 .nav {
   font-size: 0.4em;
-
+  color:  #BCE7FD;
 }
+
+.nav a {
+    text-decoration: none !important;
+}
+<<<<<<< HEAD
 
 a
 header li {
@@ -40,5 +61,9 @@ header li {
      right: 20px;
      display: inline-block;
      list-style: none;
+=======
+>>>>>>> 177933b214f143647ca996f331be6b3a0f126289
 
+.profile_pic{
+  border-radius: 100%;
 }

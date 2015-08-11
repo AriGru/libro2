@@ -1,7 +1,8 @@
+
 <h1>My Profile</h1>
 
 
-<%= image_tag @user.image.url(:thumb) %>
+<%= image_tag @user.image.url(:thumb), class: "profile_pic" %>
 
 <br>
 
@@ -16,4 +17,3 @@
 <br>
 
 <%= @user.bio %>
-
