@@ -35,7 +35,7 @@ gem 'goodreads', '~> 0.4.1'
 gem 'public_activity'
 
 gem "paperclip", "~> 4.3"
-gem "searchkick"
+
 
 # Use Unicorn as the app server
 # gem 'unicorn'
