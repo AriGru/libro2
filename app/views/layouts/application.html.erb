@@ -24,16 +24,14 @@
 
   <ul id="menu">
        <li><%= link_to 'Explore', books_path, {:style=>'color: #BCE7FD;',  :class => "css_class"} %></li>
-  		 <li><%# link_to 'Sign Up', new_user_path, {:style=>'color: #BCE7FD;',  :class => "css_class"} %></li>
-       <li><%= link_to_unless(@current_user.nil?, "Profile", user_path(current_user), {:style=>'color:#FFFFFF;', :class => "css_class"}) %></li>
+  		 <li><% link_to 'Sign Up', new_user_path, {:style=>'color: #BCE7FD;',  :class => "css_class"} %></li>
+       <li><%# link_to_unless(@current_user.nil?, "Profile", user_path(current_user), {:style=>'color:#FFFFFF;', :class => "css_class"}) %></li>
   		 <li><%= link_to 'Activity', activities_path %></li>
-      <li> <%# link_to 'Logout', sessions_path %></li>
+      <li> <%= link_to 'Logout', sessions_path %></li>
   		 <!-- <li>Contact</li> -->
   </ul>
 
-  <!-- <%#link_to 'Login', root_path, {:style=>'color:#FFFFFF;', :class => "css_class"} %> |
-  <%# link_to_unless(@current_user.nil?, "Profile", user_path(current_user), {:style=>'color:#FFFFFF;', :class => "css_class"}) %>
-  <%# link_to 'Logout', sessions_path, {:style=>'color:#FFFFFF;', :class => "css_class", method: 'delete'} %> | -->
+
 
 
 
