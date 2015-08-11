@@ -23,7 +23,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     else
-      render action: 'new'
+      # render action: 'new'
     end
   end
 

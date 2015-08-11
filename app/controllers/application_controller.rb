@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   helper_method :current_user
-  hide_action :current_user
+
 
   def current_user
     @current_user ||= User.find_by(id: session[:user_id]) #wont go into the database if we have the correct user

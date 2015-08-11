@@ -15,7 +15,7 @@
  */
 
 @import "font-awesome";
-@import "font-awesome-sprockets";
+/*@import "font-awesome-sprockets";*/
 
  body {
    background-image: url(stardust.png);
@@ -45,12 +45,13 @@ header {
 
 .nav {
   font-size: 0.4em;
-  color:  #BCE7FD;
+  color:  #E84545;
 }
 
 .nav a {
     text-decoration: none !important;
 }
+
 
 
 a
