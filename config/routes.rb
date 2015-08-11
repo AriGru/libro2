@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   resources :activities
 
-
+  resource :sessions, only: [:new, :destroy]
   resources :chats, only: [:show, :edit, :update, :destroy]
 
   resources :books do
