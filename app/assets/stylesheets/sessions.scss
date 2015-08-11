@@ -1,10 +1,22 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-header {
-  text-align: center;
+
+
+h1 {
+  text-align: left;
   font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 4em;
+  font-size: 10em;
   color: #E84545;
   link-decoration: none;
+  padding-bottom: 1em;
+  padding-left: 1em;
+  float: left;
+
+}
+
+.sign-up {
+  float: right;
+  padding-left: 10em;
+
 }

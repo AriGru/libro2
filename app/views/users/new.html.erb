@@ -1,10 +1,10 @@
+<h1>L I B R O</h1>
 
-
-<h1>Sign up</h1>
+<h2>Sign up</h2>
 
 <%= form_for @user, html: { multipart: true } do |f| %>
 
-
+<div class="sign-up">
 <p>
  <%= f.label :image %>
  <%= f.file_field :image %>
