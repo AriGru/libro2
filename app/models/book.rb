@@ -1,5 +1,8 @@
 class Book < ActiveRecord::Base
-
+  def self.search(search)
+    where("name ILIKE ?", "%#{search}%")
+    where("content ILIKE ?", "%#{search}%")
+  end
   include PublicActivity::Model
   tracked owner: ->(controller, model) { controller && controller.current_user }
 
