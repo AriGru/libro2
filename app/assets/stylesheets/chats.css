@@ -1,0 +1,15 @@
+#chat_comment {
+  border-radius: 5px;
+  padding-right: 10em;
+  padding-top: 5em;
+
+}
+
+.button {
+  color: blue;
+}
+.actions input[type="submit"]{
+  border-radius: 5px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 1em;
+}

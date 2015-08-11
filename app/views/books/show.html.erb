@@ -20,10 +20,12 @@
 <br>
 <br>
 
+ <div class="chat">
 <% @book.chats.each do |chat| %>
 <p>
   <%= chat.comment %>
   <br>
+
 
   <%= link_to chat.user.username, user_path(chat.user)  %> |
   Added on: <%= localize(chat.created_at, :format => :long) %>
@@ -34,7 +36,11 @@
 </p>
 <% end %>
 
+<div class="chat">
 <h3>Join the Conversation...</h3>
+
 
 <%= render 'chats/form' %>
 <%= link_to 'Back', books_path %>
+
+</div>
