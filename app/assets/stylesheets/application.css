@@ -119,6 +119,10 @@ input:focus {
    text-decoration: none !important;
  }
 
+ .hamburger-shell:hover{
+   cursor: pointer;
+ }
+
 header h1{
   padding-top: 1.3em;
   font-size: 2.5em;
