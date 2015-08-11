@@ -194,7 +194,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   font-awesome-sass
-  goodreads
+  goodreads (~> 0.4.1)
   httparty
   jbuilder (~> 2.0)
   jquery-rails

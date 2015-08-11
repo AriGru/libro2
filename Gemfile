@@ -30,7 +30,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
-gem 'goodreads'
+gem 'goodreads', '~> 0.4.1'
 
 gem 'public_activity'
 
