@@ -16,31 +16,24 @@
 
 
   <!-- <div class="bg-cover" class="none"></div> -->
-  <nav>
-  	<div class="hamburger-shell">
-       <div class="hamb top"></div>
-  	   <div class="hamb middle"></div>
-  	   <div class="menu-name">MENU</div>
-    </div>
-    <ul id="menu">
+
+  <a class="hamburger-shell">
+  	<div class="hamb top"></div>
+  		<div class="hamb middle"></div>
+  	<div class="menu-name">MENU</div>
+
+  <ul id="menu">
        <li><%= link_to 'Explore', books_path, {:style=>'color: #BCE7FD;',  :class => "css_class"} %></li>
   		 <li><% link_to 'Sign Up', new_user_path, {:style=>'color: #BCE7FD;',  :class => "css_class"} %></li>
-       <li><%= link_to_unless(@current_user.nil?, "Profile", user_path(current_user), {:style=>'color:#FFFFFF;', :class => "css_class"}) %></li>
+       <li><%# link_to_unless(@current_user.nil?, "Profile", user_path(current_user), {:style=>'color:#FFFFFF;', :class => "css_class"}) %></li>
   		 <li><%= link_to 'Activity', activities_path %></li>
       <li> <%= link_to 'Logout', sessions_path %></li>
-    </ul>
-
-  </nav>
+  		 <!-- <li>Contact</li> -->
+  </ul>
 
 
   <body>
-
-
-  <% unless @current_user.nil? %>
-
-    <header class='header-container'>
-      <h1 class='libro-logo'>L I B R O</h1>
-      <div class='container'>
+    <div class='container'>
        <div class='search-container'>
          <input placeholder='search' type='text'>
          <a class='button'>
@@ -48,6 +41,17 @@
          </a>
        </div>
      </div>
+ 
+
+  <% unless @current_user.nil? %>
+
+    <header>
+      <h1>L I B R O</h1>
+        <div class="nav">
+          <%= link_to 'Explore', books_path, {:style=>'color: #BCE7FD;',  :class => "css_class"} %> |
+          <%= link_to 'Activity', activities_path, {:style=>'color:#BCE7FD;', :class => "css_class"} %> |
+          <%= link_to_unless(@current_user.nil?, "Profile", user_path(current_user), {:style=>'color:#BCE7FD;', :class => "css_class"}) %>
+        </div>
     </header>
 
     <% end %>
