@@ -14,21 +14,26 @@
 
 
 <body>
+  <% unless current_user.nil? %>
+
+  <div class= "hamburger-menu">
+      <i class="fa fa-bars fa-2x"></i>
+      <%= link_to 'Sign Up', new_user_path, {:style=>'color:#FFFFFF;', :class => "css_class"} %> |
+      <%= link_to 'Login', root_path, {:style=>'color:#FFFFFF;', :class => "css_class"} %> |
+      <%= link_to_unless(@current_user.nil?, "Profile", user_path(current_user), {:style=>'color:#FFFFFF;', :class => "css_class"}) %>
+  </div>
 
 
-<nav>
+    <header>
+      <h1>L I B R O</h1>
+        <div class="nav">
+          <%= link_to 'Explore', books_path, {:style=>'color: #BCE7FD;',  :class => "css_class"} %> |
+          <%= link_to 'Activity', activities_path, {:style=>'color:#BCE7FD;', :class => "css_class"} %> |
+          <%= link_to_unless(@current_user.nil?, "Profile", user_path(current_user), {:style=>'color:#BCE7FD;', :class => "css_class"}) %>
+        </div>
+    </header>
 
-    <i class="fa fa-bars fa-2x"></i>
-    <%= link_to 'Sign Up', new_user_path, {:style=>'color:#FFFFFF;', :class => "css_class"} %> | <%= link_to 'Login', root_path, {:style=>'color:#FFFFFF;', :class => "css_class"} %> | <%= link_to 'Profile', user_path(current_user), {:style=>'color:#FFFFFF;', :class => "css_class"} %>
-</nav>
-  <header>
-    <h1>L I B R O</h1>
-    <div class="nav">
-
-     <%= link_to 'Explore', books_path, {:style=>'color: #BCE7FD;',  :class => "css_class"} %> | <%= link_to 'Activity', activities_path, {:style=>'color:#BCE7FD;', :class => "css_class"} %> | <%= link_to 'Profile', user_path(current_user), {:style=>'color:#BCE7FD;', :class => "css_class"} %>
-    </div>
-  </header>
-
+    <% end %>
 
 <%= yield %>
 

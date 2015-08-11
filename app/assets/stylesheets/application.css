@@ -13,22 +13,26 @@
  *= require_tree .
  *= require_self
  */
- @import "font-awesome-sprockets";
+
 @import "font-awesome";
+@import "font-awesome-sprockets";
 
  body {
    background-image: url(stardust.png);
    color: #ffffff;
  }
-.icon{
-  text-align: left;
+.profile_pic {
+  border-radius: 100%;
 }
- nav {
-   text-align: right;
+.hamburger-menu {
+  text-align: right;
+}
+ .hamburger-menu a {
+   text-decoration: none !important;
  }
 
 header h1{
-  font-size: 4em;
+  font-size: 2em;
 }
 header {
   text-align: center;
@@ -41,19 +45,12 @@ header {
 
 .nav {
   font-size: 0.4em;
-
-
-}
-header li {
-  font-size: 1em;
-     position: absolute;
-     top: 0px;
-     right: 20px;
-     display: inline-block;
-     list-style: none;
-
+  color:  #BCE7FD;
 }
 
+.nav a {
+    text-decoration: none !important;
+}
 
 .profile_pic{
   border-radius: 100%;
