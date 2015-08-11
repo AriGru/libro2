@@ -1,7 +1,7 @@
 added comment
 
 <% if activity.trackable %>
-<%= link_to activity.trackable.name, activity.trackable.name %>
+<%= link_to activity.trackable(@book), activity.trackable(@book) %>
 <% else %>
 which has been removed
 <% end %>
