@@ -1,19 +1,27 @@
+
+<div class="profile">
 <h1>My Profile</h1>
 
 
+<div class="photo">
 <%= image_tag @user.image.url(:thumb), class: "profile_pic" %>
+</div>
 
 <br>
 
-<%= @user.name %>
+<div class="name">
+ Name: <%= @user.name %>
+ </div>
 
 <br>
+<div class="username">
+Username: <%= @user.username %>
+</div>
+
 <br>
 
-<%= @user.username %>
-
-<br>
-<br>
-
-<%= @user.bio %>
+<div class="bio">
+Bio: <%= @user.bio %>
+  </div>
+ </div>
 

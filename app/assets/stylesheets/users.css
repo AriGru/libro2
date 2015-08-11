@@ -4,5 +4,55 @@
 
 .profile_pic{
   border-radius: 100%;
+}
+
+.profile {
+  text-align: center;
+  padding-top: 40px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 1.3em;
+}
+
+.photo {
+
+  width: 50%;
+  text-align:center;
+  margin: auto;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.name {
+  background-color: #E84545;
+  width: 25%;
+  text-align:center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin: auto;
+  position: relative;
+  top: -10px;
+  /*background-image: url('geometry.png');*/
+}
+
+.username {
+   background-color: #E84545;
+  width: 25%;
+  text-align:center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin: auto;
+  position: relative;
+  top: -25px;
+}
+
+.bio {
+ background-color: #E84545;
+  width: 25%;
+  text-align:center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin: auto;
+  position: relative;
+  top: -40px;
 
 }
