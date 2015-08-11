@@ -15,7 +15,7 @@
  */
 
 @import "font-awesome";
-@import "font-awesome-sprockets";
+/*@import "font-awesome-sprockets";*/
 
  body {
    background-image: url(stardust.png);
@@ -50,8 +50,4 @@ header {
 
 .nav a {
     text-decoration: none !important;
-}
-
-.profile_pic{
-  border-radius: 100%;
 }

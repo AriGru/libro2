@@ -14,3 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+/*
+ * uilang v1.0.1
+ * http://uilang.com
+ */
