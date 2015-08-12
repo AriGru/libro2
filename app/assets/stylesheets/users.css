@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+
 .profile_pic{
   border-radius: 100%;
 }
@@ -18,6 +20,7 @@ h1 {
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 3.3em;
   padding-top: 2em;
+  padding-right: 4%;
 }
 .photo {
 
