@@ -30,16 +30,15 @@ h1 {
 
 .name {
   background-color: #E84545;
-  width: 25%;
-  text-align:center;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  margin: auto;
-  position: relative;
-  top: -10px;
+    width: 25%;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin: auto;
+    position: relative;
+    top: -10px;
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 1.5em;
-  /*background-image: url('geometry.png');*/
 }
 
 .username {
