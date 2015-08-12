@@ -8,11 +8,6 @@ class BooksController < ApplicationController
 
 def index
   @books = Book.all
-  if params[:search]
-    @books = Book.search(params[:search]).order("created_at DESC")
-  else
-    @books = Book.all.order('created_at DESC')
-  end
 end
 
   # GET /books/1
@@ -63,6 +58,13 @@ end
     end
   end
 
+  def destroy
+    @book.destroy
+    respond_to do |format|
+      format.html { redirect_to books_path, notice: 'Post was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.

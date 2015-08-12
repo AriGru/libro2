@@ -16,41 +16,41 @@
 
 
 
+<nav>
+   <div class="hamburger-shell">
+      <div class="hamb top"></div>
+      <div class="hamb middle"></div>
+      <div class="menu-name">MENU</div>
+   </div>
+   <ul id="menu">
+      <li><%= link_to 'Explore', books_path, {:style=>'color: #BCE7FD;',  :class => "css_class"} %></li>
+      <li><% link_to 'Sign Up', new_user_path, {:style=>'color: #BCE7FD;',  :class => "css_class"} %></li>
+      <li><%= link_to_unless(@current_user.nil?, "Profile", user_path(current_user), {:style=>'color:#BCE7FD;', :class => "css_class"}) %></li>
+      <li><%= link_to 'Activity', activities_path, {:style=>'color:#BCE7FD;'} %></li>
+     <li> <%= link_to 'Logout', sessions_path, {:style=>'color:#BCE7FD;'} %></li>
+   </ul>
 
-  <ul id="menu">
-      <li><%= link_to 'Explore', books_path, {:style=>'color: #BCE7FD  ;',  :class => "css_class"} %></li>
-  <li><% link_to 'Sign Up', new_user_path, {:style=>'color: #BCE7FD  ;',  :class => "css_class"} %></li>
-      <li><%= link_to_unless(@current_user.nil?, "Profile", user_path(current_user), {:style=>'color:#BCE7FD  ;', :class => "css_class"}) %></li>
-  <li><%= link_to 'Activity', activities_path, {:style=>'color:#BCE7FD  ;'} %></li>
-      <li> <%= link_to 'Logout', sessions_path, {:style=>'color:#BCE7FD  ;'} %></li>
-    </ul>
-
-  </nav>
-
-
-  <body>
-    <div class='container'>
-       <div class='search-container'>
-         <input placeholder=' search' type='text'>
-         <a class='button'>
-          <i class="fa fa-search"></i>
-         </a>
-       </div>
-     </div>
+ </nav>
 
 
-  <% unless @current_user.nil? %>
+ <body>
 
-    <header>
-      <h1>L I B R O</h1>
-        <div class="nav">
-          <%= link_to 'Explore', books_path, {:style=>'color: #BCE7FD;',  :class => "css_class"} %> |
-          <%= link_to 'Activity', activities_path, {:style=>'color:#BCE7FD;', :class => "css_class"} %> |
-          <%= link_to_unless(@current_user.nil?, "Profile", user_path(current_user), {:style=>'color:#BCE7FD;', :class => "css_class"}) %>
-        </div>
-    </header>
 
-    <% end %>
+ <% unless @current_user.nil? %>
+
+   <header class='header-container'>
+     <h1 class='libro-logo'>L I B R O</h1>
+     <div class='container'>
+      <div class='search-container'>
+        <input placeholder=' search' type='text'>
+        <a class='button'>
+         <i class="fa fa-search"></i>
+        </a>
+      </div>
+    </div>
+   </header>
+
+   <% end %>
 
 <%= yield %>
 

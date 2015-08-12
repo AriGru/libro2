@@ -30,6 +30,7 @@
   outline: none;
   color: #6D7781;
   font-size: 16px;
+  padding-left: 1.2px;
 }
 
 h1 {
@@ -56,27 +57,28 @@ h3{
   font-family: 'Open Sans Condensed', sans-serif;
   color:  #BCE7FD;
   font-size: 3.5em;
-  margin-left: -0.2em;
+  margin-left: 0.2em;
 
 }
 
 
 input[type="submit"] {
-  background: #BCE7FD;
+  background: #E84545;
   border: 0;
-  width: 250px;
-  height: 40px;
+  width: 60px;
+  height: 30px;
   border-radius: 3px;
   color: #fff;
   font-size: 12px;
-  margin-left: -14px;
+  margin-left: 305.5px;
   margin-top: 4px;
   cursor: pointer;
   transition: background 0.3s ease-in-out;
   border-bottom: 0px none;
+
 }
 input[type="submit"]:hover {
-  background: #BCE7FD;
+  background: #E84545;
   animation-name: shake;
 }
 
